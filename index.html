@@ -242,16 +242,93 @@
             color: #fff;
             transform: scale(1.05);
         }
-        @media (max-width: 768px) {
+        
+        /* Media Queries for Responsiveness */
+
+        /* Tablet View (max-width: 1024px) */
+        @media (max-width: 1024px) {
             .hero {
                 flex-direction: column;
-                text-align: center;
-            }
-            .hero img {
-                margin-bottom: 20px;
+                padding: 30px;
             }
             .hero .info {
-                max-width: 100%;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            .hero h2, .hero h3, .hero h4 {
+                font-size: 40px;
+            }
+            .hero img {
+                width: 400px;
+                height: 400px;
+            }
+            nav ul li {
+                margin: 0 15px;
+            }
+            nav ul li a {
+                font-size: 16px;
+            }
+            .skills-list {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+            .about-me p {
+                font-size: 16px;
+            }
+        }
+
+        /* Mobile View (max-width: 768px) */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-wrap: wrap; /* Allow items to wrap to the next line */
+                justify-content: center; /* Center items horizontally */
+                padding: 0 10px; /* Add some padding to the sides */
+            }
+            nav ul li {
+                margin: 5px 8px; /* Adjust margin for horizontal spacing */
+            }
+            nav ul li a {
+                font-size: 14px;
+                padding: 8px 12px;
+            }
+            header h1 {
+                font-size: 36px;
+            }
+            .hero {
+                padding: 20px;
+            }
+            .hero h2, .hero h3, .hero h4 {
+                font-size: 30px;
+            }
+            .hero img {
+                width: 250px;
+                height: 250px;
+                margin-bottom: 20px;
+            }
+            .about-me h2, .skills-section h2 {
+                font-size: 30px;
+            }
+            .about-me p {
+                font-size: 14px;
+            }
+            .skills-list {
+                grid-template-columns: 1fr; /* Single column for mobile */
+            }
+            .social-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .social-links a {
+                font-size: 18px;
+            }
+            .work-item h3 {
+                font-size: 20px;
+            }
+            .work-item p {
+                font-size: 14px;
+            }
+            .click-box {
+                padding: 6px 15px;
+                font-size: 14px;
             }
         }
     </style>
